@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Pokémaster!</title>
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!-- COMMENT -  CODE BELOW IS FOR HEADER IMAGE  -->
+    <div class="header-img">
+        <div id="textlemala">
+            <!--<h2 style="text-align: center; color: white; background-color: rgb(179, 19, 19); font-family: verdana">solomon-it</h2>
+        -->
+</head>
+
+<body>
+    <!-- הערה, הקוד מתחת הוא קובץ שמע-->
+    <audio hidden controls autoplay>
+        <source src="next.ogg" type="audio/ogg">
+    </audio>
+    <header>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"
+                            style="color: yellow;font-family: fantasy; font-size: 30px;">Pokémaster!</a></li>
+
+
+                </ul>
+        </nav>
+
+
+
+
+    </header>
+
+    <br>
+    <div id="tofes">
+        <p id="textovermonster">"טוב בוא נראה אם נצליח לתפוס את איבי"</p>
+
+        <img src="pokeball2.png" id="pokeball2">
+        <img src="pokeball.png" onclick="setTimeout(myFunction, 3000); disapir ()" id="pokeball">
+        <br>
+        <img src="EEVE.png" style="height: 250; width: 250;" id="monster"
+            onclick="bang ();  anim (); reducebig (); retrieve ()">
+
+
+
+        <!-- <img src="https://i.imgur.com/wgAceCM.png" id="logo">
+                       -->
+    </div>
+
+
+    <script>
+        function retrieve() {
+            if (big <= 0) {
+                document.getElementById("pokeball2").style.display = "block";
+            }
+        }
+
+        function disapir() {
+            document.getElementById("pokeball").style.display = "none";
+            document.getElementById("monster").style.display = "inline-block";
+            document.getElementById("textovermonster").style.display = "block";
+
+
+        }
+
+        function anim() {
+            if (big <= 1) {
+                document.getElementById("monster").style.transform = "rotate(180deg) scale(0)"
+            }
+
+        }
+        var big = 6;
+
+        function reducebig() {
+
+            big--;
+        }
+
+        function myFunction() {
+            if (number >= 6) {
+
+                window.location.replace("index4.html")
+            } else {
+                window.location.replace("fail.html")
+            }
+        }
+
+        var number = 0;
+
+        function bang() {
+            number++;
+
+        }
+    </script>
+
+
+</body>
+
+
+</html>
